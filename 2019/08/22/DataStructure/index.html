@@ -15,20 +15,20 @@
 <meta property="og:site_name" content="个人博客--兰 兮">
 <meta property="og:description" content="转载:我没有三颗心脏-简书  每一点知识的积累，终会有用武之地。也许，它会使您在面试过程中正确地回答一道面试题；也许，它会让您更加清楚Java底层的实现方式；也许，它能让您在学业上感到更加充实…(以上摘自梁勇著的Java深入解析_前言)">
 <meta property="og:locale">
-<meta property="og:image" content="http://lanxi1024.com/DataStructure/Person.png">
-<meta property="og:image" content="http://lanxi1024.com/DataStructure/Integer.png">
-<meta property="og:image" content="http://lanxi1024.com/DataStructure/String.png">
-<meta property="og:image" content="http://lanxi1024.com/DataStructure/String2.png">
-<meta property="og:image" content="http://lanxi1024.com/DataStructure/zhichuandi.png">
-<meta property="og:image" content="http://lanxi1024.com/DataStructure/yinyongchuandi.png">
-<meta property="og:image" content="http://lanxi1024.com/DataStructure/yinyongchuandi2.png">
+<meta property="og:image" content="http://lanxi1024.com/2019/08/22/DataStructure/Person.png">
+<meta property="og:image" content="http://lanxi1024.com/2019/08/22/DataStructure/Integer.png">
+<meta property="og:image" content="http://lanxi1024.com/2019/08/22/DataStructure/String.png">
+<meta property="og:image" content="http://lanxi1024.com/2019/08/22/DataStructure/String2.png">
+<meta property="og:image" content="http://lanxi1024.com/2019/08/22/DataStructure/zhichuandi.png">
+<meta property="og:image" content="http://lanxi1024.com/2019/08/22/DataStructure/yinyongchuandi.png">
+<meta property="og:image" content="http://lanxi1024.com/2019/08/22/DataStructure/yinyongchuandi2.png">
 <meta property="article:published_time" content="2019-08-22T14:47:15.000Z">
 <meta property="article:modified_time" content="2019-10-27T06:23:44.000Z">
 <meta property="article:author" content="兰 兮">
 <meta property="article:tag" content="java">
 <meta property="article:tag" content="数据结构">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://lanxi1024.com/DataStructure/Person.png">
+<meta name="twitter:image" content="http://lanxi1024.com/2019/08/22/DataStructure/Person.png">
   
     <link rel="alternative" href="/atom.xml" title="个人博客--兰 兮" type="application/atom+xml">
   
@@ -231,7 +231,7 @@
 <p>这句代码的含义是：</p>
 <p>创建了一个新的引用P2,保存在栈中，引用的地址也指向Person的地址。这个时候，你通过P2来改变person对象的状态，也会改变p的结果。因为它们指向同一个对象（String除外）。</p>
 <p>此时，内存中是这样的：</p>
-<p><img src="/DataStructure/Person.png"></p>
+<p><img src="/2019/08/22/DataStructure/Person.png"></p>
 <p>有一个很通俗的方式来讲解引用和对象。大家对于快捷方式应该不会陌生吧。我们桌面的图标大部分都是快捷方式。它并不是我们安装在电脑上的应用的可执行文件（不是exe文件），那么为什么点击它可以打开应用程序呢？是因为快捷方式连接了文件，这就是引用和对象的关系了。</p>
 <p>我们不直接对文件进行操作，而是通过快捷方式来进行操作，快捷方式不能独立存在，同样，引用也不能独立存在（你可以只创建一个引用，但是当你要使用它的时候必须得给它赋值，否则它将毫无用处）。</p>
 <p>一个文件可以对应多个快捷方式，同样一个对象也可以有多个引用，而一个引用只能同时对应一个对象。</p>
@@ -251,14 +251,14 @@
 <p>但是，用new操作符创建的对象是不同的，也就是说，此时，i和j指向不同的内存地址。</p>
 <p><strong>因为每次调用new操作符，都会在堆中开辟新的空间。</strong></p>
 <h3 id="深入了解Integer"><a href="#深入了解Integer" class="headerlink" title="深入了解Integer"></a>深入了解Integer</h3><p>来看一个例子：</p>
-<p><img src="/DataStructure/Integer.png"></p>
+<p><img src="/2019/08/22/DataStructure/Integer.png"></p>
 <blockquote>
 <p>第一个返回true很好理解，就像上面的，a和b指向相同的地址。</p>
 <p>第二个返回false是（Integer类的内部类缓存了 -128 到127的所有数字）；</p>
 <p>第三个返回false是因为用了new关键字来开辟了新的空间，i和j两个对象分别指向堆区中的两块内存空间。</p>
 </blockquote>
 <h3 id="另一个特例：String"><a href="#另一个特例：String" class="headerlink" title="另一个特例：String"></a>另一个特例：String</h3><p>String是一个特殊的类，因为它被final修饰符所修饰，是一个不可改变的类。当然，看过Java源码后你会发现，基本类型的各个包装类也被final修饰，这里以String为例</p>
-<p><img src="/DataStructure/String.png"></p>
+<p><img src="/2019/08/22/DataStructure/String.png"></p>
 <blockquote>
 <p>执行第一句：常量区开辟空间存放“abc”，S1存放在栈中指向“abc”</p>
 <p>指行第二句，S2也指向“abc”</p>
@@ -267,7 +267,7 @@
 <p>当s1内容发生改变的时候，这个时候，常量区开辟新的空间存放“bcd”，S1指向“bcd”，而S2和S3指向“abc”所以只有S2和S3相等。<br>这种情况下，S1,S2,S3 都是字符串常量，类似于基本数据类型。</p>
 </blockquote>
 <p>我们再看一个例子：</p>
-<p><img src="/DataStructure/String2.png"></p>
+<p><img src="/2019/08/22/DataStructure/String2.png"></p>
 <blockquote>
 <p>执行第一行代码：在堆里分配空间存放String对象，在常量区开辟空间存放常量“abc”，String对象指向常量，s1指向该对象。</p>
 <p>执行第二行代码：S2指向上一步new出来的string对象。</p>
@@ -280,7 +280,7 @@
 <p>当然，Java还提供了了StringBuffer类，这个是可以在原对象上做修改的。如果你需要修改原对象，那么请使用StringBuffer类。</p>
 <h3 id="引发的问题：值传递还是引用传递？"><a href="#引发的问题：值传递还是引用传递？" class="headerlink" title="引发的问题：值传递还是引用传递？"></a>引发的问题：值传递还是引用传递？</h3><p>Java是值传递还是引用传递的呢？毫无疑问，Java是值传递的。那么什么又叫值传递和引用传递呢？</p>
 <p>我们先看一个例子：</p>
-<p><img src="/DataStructure/zhichuandi.png"></p>
+<p><img src="/2019/08/22/DataStructure/zhichuandi.png"></p>
 <p>这是一个很经典的例子，我们希望调用了swap函数以后，a和b的值可以互换，但是事实上并没有。为啥呢？</p>
 <p>这就是因为Java是值传递的，也就是说，我们在调用一个需要传递参数的函数时，传递给函数的参数并不是我们传进去的参数本身，而是它的副本。</p>
 <p>所以，当swap函数执行完毕之后，交换了的数据只是swap自己复制的那一份，而原来的数据没变。</p>
@@ -288,13 +288,13 @@
 <p>也可以理解为别的函数把数据传递给了swap函数的形参，最后改变的只是形参而实参没变，所以不会起到任何效果。</p>
 </blockquote>
 <p>我们再看一个复杂一点的例子(Person添加了get，set方法)：</p>
-<p><img src="/DataStructure/yinyongchuandi.png"></p>
+<p><img src="/2019/08/22/DataStructure/yinyongchuandi.png"></p>
 <blockquote>
 <p>可以看到，我们把p1传进去，它并没有别替换成新的对象，因为chagne函数操作的不是p1这个引用本身，而是这个引用的一个副本。</p>
 <p>你依然可以理解为，主函数将p1复制了一份然后变成了chagne函数的形参,最终指向新Person对象的是那个副本引用，而实参p1并没有改变</p>
 </blockquote>
 <p>再来看一个例子：</p>
-<p><img src="/DataStructure/yinyongchuandi2.png"></p>
+<p><img src="/2019/08/22/DataStructure/yinyongchuandi2.png"></p>
 <blockquote>
 <p>这次为什么就改变了呢？<br>传递的过程中，因为引用的副本指向的是同一个对象。<br>因为changgeAge通过自己的副本引用，改变了里面的参数值<br>由于对象被改变了，所以所有引用调用方法得到的年龄都会改变。</p>
 </blockquote>
@@ -526,11 +526,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">操作符</a>
+                <a href="javascript:void(0)" class="js-tag color2">Java基础</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Java基础</a>
+                <a href="javascript:void(0)" class="js-tag color4">操作符</a>
               </li>
              
               <li class="article-tag-list-item">

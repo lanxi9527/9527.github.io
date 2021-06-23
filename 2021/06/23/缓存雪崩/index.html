@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://lanxi1024.com">
-  <title>Tag: 视图 | 个人博客--兰 兮</title>
+  <title>讲述缓存雪崩、缓存穿透、缓存击穿 | 个人博客--兰 兮</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="个人博客--兰 兮">
-<meta property="og:url" content="http://lanxi1024.com/tags/%E8%A7%86%E5%9B%BE/index.html">
+  <meta name="description" content="1. 缓存雪崩对于系统A，假如每天高峰期每秒5000个请求，本来缓存在高峰期可以抗住每秒4000个请求，但是缓存机器意外发生宕机。缓存挂了，此时1秒5000个请求全部落在数据库，数据库必然是扛不住的，它会先报警，然后挂掉。此时，如果没有采用什么特殊的方案来处理这个故障，DBA(数据管理员)很着急，重启数据库，但是数据库立马又被新的流量给打死了，这就是缓存雪崩。 1.1 缓存雪崩的事前、事中、事后的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="讲述缓存雪崩、缓存穿透、缓存击穿">
+<meta property="og:url" content="http://lanxi1024.com/2021/06/23/%E7%BC%93%E5%AD%98%E9%9B%AA%E5%B4%A9/index.html">
 <meta property="og:site_name" content="个人博客--兰 兮">
+<meta property="og:description" content="1. 缓存雪崩对于系统A，假如每天高峰期每秒5000个请求，本来缓存在高峰期可以抗住每秒4000个请求，但是缓存机器意外发生宕机。缓存挂了，此时1秒5000个请求全部落在数据库，数据库必然是扛不住的，它会先报警，然后挂掉。此时，如果没有采用什么特殊的方案来处理这个故障，DBA(数据管理员)很着急，重启数据库，但是数据库立马又被新的流量给打死了，这就是缓存雪崩。 1.1 缓存雪崩的事前、事中、事后的">
 <meta property="og:locale">
+<meta property="article:published_time" content="2021-06-23T15:15:25.000Z">
+<meta property="article:modified_time" content="2021-06-23T15:28:22.487Z">
 <meta property="article:author" content="兰 兮">
+<meta property="article:tag" content="redis">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="个人博客--兰 兮" type="application/atom+xml">
@@ -53,9 +58,9 @@
 		<nav class="header-menu">
 			<ul>
 			
-				<li><a href="../../index.html">主页</a></li>
+				<li><a href="../../../../index.html">主页</a></li>
 	        
-				<li><a href="../../tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
+				<li><a href="../../../../tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
 	        
 			</ul>
 		</nav>
@@ -77,11 +82,11 @@
 		<nav class="header-nav">
 			<div class="social">
 				
-					<a class="github" target="_blank" href="../../https:/github.com/LanXi1024" title="github"><i class="icon-github"></i></a>
+					<a class="github" target="_blank" href="../../../../https:/github.com/LanXi1024" title="github"><i class="icon-github"></i></a>
 		        
-					<a class="weibo" target="_blank" href="../../https:/weibo.com/" title="weibo"><i class="icon-weibo"></i></a>
+					<a class="weibo" target="_blank" href="../../../../https:/weibo.com/" title="weibo"><i class="icon-weibo"></i></a>
 		        
-					<a class="jianshu" target="_blank" href="../../https:/www.jianshu.com/p/44a4a1c32b4f" title="jianshu"><i class="icon-jianshu"></i></a>
+					<a class="jianshu" target="_blank" href="../../../../https:/www.jianshu.com/p/44a4a1c32b4f" title="jianshu"><i class="icon-jianshu"></i></a>
 		        
 			</div>
 		</nav>
@@ -116,11 +121,11 @@
 			<nav class="header-nav">
 				<div class="social">
 					
-						<a class="github" target="_blank" href="../../https:/github.com/LanXi1024" title="github"><i class="icon-github"></i></a>
+						<a class="github" target="_blank" href="../../../../https:/github.com/LanXi1024" title="github"><i class="icon-github"></i></a>
 			        
-						<a class="weibo" target="_blank" href="../../https:/weibo.com/" title="weibo"><i class="icon-weibo"></i></a>
+						<a class="weibo" target="_blank" href="../../../../https:/weibo.com/" title="weibo"><i class="icon-weibo"></i></a>
 			        
-						<a class="jianshu" target="_blank" href="../../https:/www.jianshu.com/p/44a4a1c32b4f" title="jianshu"><i class="icon-jianshu"></i></a>
+						<a class="jianshu" target="_blank" href="../../../../https:/www.jianshu.com/p/44a4a1c32b4f" title="jianshu"><i class="icon-jianshu"></i></a>
 			        
 				</div>
 			</nav>
@@ -129,9 +134,9 @@
 				<ul style="width: 50%">
 				
 				
-					<li style="width: 50%"><a href="../../index.html">主页</a></li>
+					<li style="width: 50%"><a href="../../../../index.html">主页</a></li>
 		        
-					<li style="width: 50%"><a href="../../tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
+					<li style="width: 50%"><a href="../../../../tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
 		        
 				</ul>
 			</nav>
@@ -146,73 +151,120 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-缓存雪崩" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="../../archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="../../2020/04/23/%E8%A7%86%E5%9B%BE%E7%B4%A2%E5%BC%95%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B%E5%92%8C%E8%A7%A6%E5%8F%91%E5%99%A8/" class="archive-article-date">
-  	<time datetime="2020-04-23T08:36:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-23</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="../../2020/04/23/%E8%A7%86%E5%9B%BE%E7%B4%A2%E5%BC%95%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B%E5%92%8C%E8%A7%A6%E5%8F%91%E5%99%A8/">视图、索引、存储过程和触发器</a>
+    <h1 class="article-title" itemprop="name">
+      讲述缓存雪崩、缓存穿透、缓存击穿
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="" class="archive-article-date">
+  	<time datetime="2021-06-23T15:15:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-23</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1-缓存雪崩"><a href="#1-缓存雪崩" class="headerlink" title="1. 缓存雪崩"></a>1. 缓存雪崩</h2><p>对于系统A，假如每天高峰期每秒5000个请求，本来缓存在高峰期可以抗住每秒4000个请求，但是缓存机器意外发生宕机。缓存挂了，此时1秒5000个请求全部落在数据库，数据库必然是扛不住的，它会先报警，然后挂掉。此时，如果没有采用什么特殊的方案来处理这个故障，DBA(数据管理员)很着急，重启数据库，但是数据库立马又被新的流量给打死了，这就是缓存雪崩。</p>
+<h4 id="1-1-缓存雪崩的事前、事中、事后的解决方案："><a href="#1-1-缓存雪崩的事前、事中、事后的解决方案：" class="headerlink" title="1.1 缓存雪崩的事前、事中、事后的解决方案："></a>1.1 缓存雪崩的事前、事中、事后的解决方案：</h4><p><strong>事前:</strong>    Redis高可用,主从 + 哨兵 , redis cluster , 避免全盘崩溃。</p>
+<p><strong>事中:</strong>    本地ehcache缓存+hystrix限流&amp;降级，避免mysql 被打死。</p>
+<p><strong>事后:</strong>    redis 持久化，一旦重启，自动从磁盘上加载数据，快速恢复缓存数据。</p>
+<h2 id="2-缓存穿透"><a href="#2-缓存穿透" class="headerlink" title="2. 缓存穿透"></a>2. 缓存穿透</h2><p>对于系统A，假设一秒5000个请求，结果其中4000个请求是黑客发出的恶意攻击。黑客发出的那4000个攻击，缓存中查不到，每次你去数据库里查，也查不到。举个例子，数据库id是从1开始的，结果黑客发过来的请求id全部都是负数，这样的话，缓存中不会有，请求每次都“视缓存于无物”，直接查询数据库，这种恶意攻击场景的缓存穿透就会直接把数据库给打死。</p>
+<h4 id="2-1-解决方式很简单："><a href="#2-1-解决方式很简单：" class="headerlink" title="2.1 解决方式很简单："></a>2.1 解决方式很简单：</h4><ul>
+<li><p>每次系统A从数据库中只要没查到，就写一个空值到缓存里区，比如set -999 unknown。然后设置一个过期时间。这样的话，下次有相同的key来访问时，在缓存失效前，都可以直接从缓存中取数据。</p>
+</li>
+<li><p>验证拦截：接口层进行校验，如鉴定用户权限，对ID之类的字段做基础校验，如id&lt;0 的 直接拦截。</p>
+</li>
+<li><p>使用布隆过滤器：布隆过滤器是一种比较独特的数据结构，有一定的误差，当它指定一个数据存在时，它不一定存在，但是当它指定一个数据不存在时，那它就肯定不存在。</p>
+</li>
+<li><p>布隆过滤器：<br>布隆过滤器是一种比较特殊的数据结构，有点类似与HashMap，在业务中我们可能会通过使用HashMap来判断一个值是否存在，它可以在O(1)时间复杂度内返回结果，效率极高，但是受限于存储容量，如果可能需要去判断的值超过亿级别，那么HashMap所占的内存就很可观了。而BloomFilter解决这个问题的方案很简单。首先用多个bit位去代替HashMap中的数组，这样的话储存空间就下来了，之后就是对 Key 进行多次哈希，将 Key 哈希后的值所对应的 bit 位置为1。当判断一个元素是否存在时，就去判断这个值哈希出来的比特位是否都为1，如果都为1，那么可能存在，也可能不存在。但是如果有一个bit位不为1，那么这个Key就肯定不存在。</p>
+<p><strong>注意</strong> BloomFilter并不支持删除操作，只支持添加操作。这一点很容易理解，因为你如果要删除数据，就得将对应的bit位置为0，但是你这个Key对应的bit位可能其他的Key也对应着。</p>
+<p><strong>缓存空数据与布隆过滤器的比较：</strong></p>
+<ul>
+<li>当一些恶意攻击查询的key不相同时，而且数量居多。此时缓存空数据就不是一个好的解决方案。因为它需要存储所有的key，内存占用更高。并且在这种情况下，很多key都仅使用一次，所有存储下来并无意义。这时选用布隆过滤器是一个不错的解决方案。</li>
+<li>而对空数据的key数量有限，key的重复请求效率更高时，可以采用缓存空数据来解决。</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-缓存击穿"><a href="#3-缓存击穿" class="headerlink" title="3. 缓存击穿"></a>3. 缓存击穿</h2><p>缓存击穿，就是说某个key非常热点，访问频率非常高，处于集中式高并发访问情况，当这个key在失效的瞬间，大量的请求就击穿了缓存，直接请求数据库，就像一道屏障被凿开了一个洞。</p>
+<h4 id="3-1-缓存击穿解决方式："><a href="#3-1-缓存击穿解决方式：" class="headerlink" title="3.1 缓存击穿解决方式："></a>3.1 缓存击穿解决方式：</h4><ul>
+<li>可以将热点数据设置为永久不过期；</li>
+<li>或者基于redis or zookeeper 实现互斥锁，等待第一个请求构建完缓存之后，再释放锁，进而其他请求才能通过key访问数据。</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">mysql</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">存储过程</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">触发器</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">视图</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">redis</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="../%E7%BA%BF%E7%A8%8B%E6%B1%A0/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Executors线程池</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
 
+  
+
+  
 
 
           </div>
@@ -235,9 +287,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
@@ -422,11 +474,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
         <ul class="search-ul">
           
             <li class="search-li">
-              <a href="../../https:/p-p-x.github.io/?nsukey=RMOcUYfE3+YdwDfNrY+VRmdsR9GhHnA7b/9ZOhuI8sa7/X7YFXMv5vHOu4YAaKnG2TnwReVFa287YTH9WMayF5Nt/agv4XZroFI7GoIvzvlCgT8D0fMHSxjGoSyK0iV+vU4zv5e9wwRjMmP6t0XA+6Mo0cQcAAjVw1zeWFsLDTqrlimVngLM7llz2tLMpHRnfEYXrzNOg8SihmGPSswsAQ==" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>Java面试宝典</a>
+              <a href="../../../../https:/p-p-x.github.io/?nsukey=RMOcUYfE3+YdwDfNrY+VRmdsR9GhHnA7b/9ZOhuI8sa7/X7YFXMv5vHOu4YAaKnG2TnwReVFa287YTH9WMayF5Nt/agv4XZroFI7GoIvzvlCgT8D0fMHSxjGoSyK0iV+vU4zv5e9wwRjMmP6t0XA+6Mo0cQcAAjVw1zeWFsLDTqrlimVngLM7llz2tLMpHRnfEYXrzNOg8SihmGPSswsAQ==" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>Java面试宝典</a>
             </li>
           
             <li class="search-li">
-              <a href="../../http:/mp.weixin.qq.com/s?__biz=MzI5NTYwNDQxNA==&mid=2247484573&idx=1&sn=98c8c2e709d447acbd16b7d1d17930cd&chksm=ec505d4cdb27d45a1707deb84ae972a162cbcac0cf733d3b04dcdc839f042d83edca84f6f94b&mpshare=1&scene=24&srcid=#rd" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>十大经典排序算法</a>
+              <a href="../../../../http:/mp.weixin.qq.com/s?__biz=MzI5NTYwNDQxNA==&mid=2247484573&idx=1&sn=98c8c2e709d447acbd16b7d1d17930cd&chksm=ec505d4cdb27d45a1707deb84ae972a162cbcac0cf733d3b04dcdc839f042d83edca84f6f94b&mpshare=1&scene=24&srcid=#rd" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>十大经典排序算法</a>
             </li>
           
         </ul>
